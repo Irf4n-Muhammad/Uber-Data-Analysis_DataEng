@@ -56,6 +56,9 @@ These data was collected from kaggle : https://www.nyc.gov/site/tlc/about/tlc-tr
 2. Fact table consist the numeric data and the dimension table consist the context of that numeric data.
 3. Put the id (Primary key and foreign key.
 
+![image](https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/791287db-7496-4b9d-98e5-bd6c15570201)
+
+
 ## 7. Jupyter Notebook
 
 ![image](https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/ad17d8d4-0ad7-4ebe-8f12-6606b826bd25)
