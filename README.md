@@ -1,5 +1,7 @@
 # Data-Engineering-Project_NYC_Taxi-Data-Analysis
 
+# (STILL IN PROGRESS, WILL BE UPDATED SOON)
+
 ## 1. Description of the Problem:
 
 In the field of investment banking and hedge funds, quantitative analysts (or 'quants') often use historical stock market data to develop complex financial models. These models serve to predict future movements of stock prices and are employed to guide investment strategies.
