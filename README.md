@@ -54,7 +54,7 @@ These data was collected from kaggle : https://www.nyc.gov/site/tlc/about/tlc-tr
 
 1. Design the database by building main table (fact table) and branch table (dimension table)
 2. Fact table consist the numeric data and the dimension table consist the context of that numeric data.
-3. Put the id (Primary key and foreign key.
+3. Put the id (Primary key and foreign key).
 
 ![image](https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/791287db-7496-4b9d-98e5-bd6c15570201)
 
@@ -88,79 +88,19 @@ In this project, we will use mage which is the modern data pipeline platform. We
 5. Now, in your google account, please set the permission to allow the 6789 port which we gonna use for our localhost (Set in the firewall section in GCP)
 6. Also, copy your external IP address of your VM instances and add the port ( <externalIPAddress>.6789 )
 7. Then, your mage webpage will be opened
+8. Then, we gonna create the data pipeline for three steps (extract, load, transformation)
 
 
-### 6.2 Terraform:
+## Google Bigquery:
 
-<img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/2faa8507-d149-4bc5-889d-9381c84f21be">
+![image](https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/9ac37ead-7a01-4829-b7e1-96bc6f90d817)
 
-The terraform will help us to make the stable and organizable environment for our google cloud and it's very easy to monitor since we only use python file to control. You can even share it to other team member if you work in group, so you all can assure using the same environment set up.
+Bigquery platform can be accessed in GCP. Since in the previous step, the load step has created the table in bigquery, so we can directly write the SQL comman to create one table that will be used for data visualization. This table will consist all the information from the entire table but referring to that table (we use join command to connect all of them)
 
-1. Set the main.tf
-2. Set the variable.tf
-3. Run the terraform through some command :
-   1. terraform init = initialize the terraform
-   2. terraform validate = check and validate that it's proper update
-   3. terraform plan = you can see what's the update and what's new in your environment
-   4. terraform apply = run and make the update
+1. Join the fact tables with the dimension tables
+2. Select all the columns and merge to become one table
 
-## 7. Airflow:
-
-<img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/0b299387-a421-49b7-aa4c-97c7816b37a9">
-
-Airflow is a tool to help the data engineer to monitor the ingesting data process. We can create the workflow by our own using python file and we can edit as like as we want. Here are some sets up to run the Airflow:
-
-1. Prepare the Dockerfile (check the environment that will be used for ingesting the data)
-2. Prepare the docker-compose.yaml (fill some specific variable based on your personal data)
-3. Prepare .env file
-4. Prapare the requirements.txt file
-5. Open the virtual machine and connect to the host (you can find it on vs code)
-6. Set the port (8080), make sure there is no machine using the same port
-7. Run the docker-compose build in directory that has docker-compose.yaml and Dockerfile
-8. Run the docker-compose up airflow-init to initialize the airflow
-9. Run the docker-compose up, wait until all the image has settled
-10. Open the search engine (google, bing, etc) and open the web ( localhost:8080 )
-11. Wait until the loading ended
-12. Sign in the airflow using the password and username that you set before (in docker-compose.yaml)
-13. Choose the DAG file that you want to run
-14. Trigger the DAG
-15. If all task has dark green color (which means succeed), then please check your gcs bucket or bigquery (only if your DAG file has a task sending the file to the bgquery)
-16. If there is an error, then click the square task and click log button to see what's the message giving to you the error information
-    There are several thing that I ever experienced that cause an error:
-    1. Airflow version is too low - Solution = Set the latest version in your Dockerfile and when you run the docker-compose build
-    2. DAG issue - Solution = Since it would be very specific, so please check the log to see what's error there
-    3. PORT is occupied - Solution : If you're using the docker, then you can find out what's machine that may use that port and you can delete that image in the docker (you can use docker apps or type the command in the git bash)
-
-## 8. Apache Spark
-
-<img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_NIFTY-50-Stock-Market-Data/assets/121205860/0e5461ea-cd71-4472-9707-ba22cf96488b">
-
-Spark is the best tool to handle large dataset and transform it to be useful and clean data. It will be used to download(extract) and will ingest into the google cloud storage bucket or bigquery using dataproc. 
-
-The general idea about what we gonna do in spark:
-So basically we wanna try to transfrom all 50+ data to be one file that cover the essential information that we need. We will merge the whole stocks data, which we have identified has the same number and column name. In case, there is an issue (according to name or data type that probably a bit different (in my case, I found one column that supposed to be date and not integer)). Then, there is one file that is additional informatiion of the entire stocks that we will join that as well using .join. After that we gonna partition by years for each company to see the progress of the stock year by year. 
-
-1. Firstly, set the virtual machines using linux or in my case, I am using google cloud VM.
-2. Export the python argument to the terminal to init the pyspark, so it can be connected to the jupyter notebook eventually.
-3. Open jupyter notebook and create the new folder.
-4. Set the connection into the google cloud platform
-5. Import the pyspark and any package you need
-6. Create the spark variable using SparkSession.builder
-7. Read the file using spark.read
-8. Check the schema using .schema or printSchema()
-9. Edit the schema if needed to decrease the number of storage and fasthen the sending process
-10. Add and renamed the column if you think it will be benefitial
-11. Do the join if you need
-12. Input registerTempTable("file-nname")
-13. Using spark.sql to use the SQL command to your file
-14. Send to the bigquery afterwards
-15. Convert it to the pyhton script
-16. Using argparse package to receive the variable from our python command which will be inserted into our terminal
-17. Set up the cluster and run the job
-18. If succeed, please check the bigquery to make sure.
-19. Your work has done
-
-## 9. Google Data Studio:
+## 7. Google Data Studio:
 
 <img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/5e3bd7a1-eee6-43a8-8912-985be393722e">
 
