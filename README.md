@@ -50,6 +50,8 @@ These data was collected from kaggle : https://www.nyc.gov/site/tlc/about/tlc-tr
 
 ## 6. Draw.io
 
+![image](https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/c8f876ea-4e45-45e1-9b1b-68cb902375dc)
+
 1. Design the database by building main table (fact table) and branch table (dimension table)
 2. Fact table consist the numeric data and the dimension table consist the context of that numeric data.
 3. Put the id (Primary key and foreign key.
@@ -64,7 +66,9 @@ These data was collected from kaggle : https://www.nyc.gov/site/tlc/about/tlc-tr
 4. Download the data from the website using ( !wget <link address> )
 5. Create the table by duplicate the column from the initial big table
 6. Generate the id (Primary key of the table) by using the index (It will generate the number from 1)
-
+7. Arrange the sequence of the column of each table
+8. Do the same thing for all table
+9. Lastly, merge all the table and arrange the sequence of the table column.
 
    
 ### 6.1 Google Cloud Platform:
