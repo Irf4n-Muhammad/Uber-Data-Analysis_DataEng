@@ -2,63 +2,71 @@
 
 # (STILL IN PROGRESS, WILL BE UPDATED SOON)
 
+
 ## 1. Description of the Problem:
+In the arena of urban transportation planning and ride-hailing services, data analysts frequently utilize historical ride data to develop predictive models. These models are used to forecast future demand, optimize route planning, and inform strategic business decisions.
 
-In the field of investment banking and hedge funds, quantitative analysts (or 'quants') often use historical stock market data to develop complex financial models. These models serve to predict future movements of stock prices and are employed to guide investment strategies.
+Take, for instance, an analyst at Uber. The predictive model they work with employs a time-series analysis approach, utilizing historical data such as ride timestamps, origin-destination pairs, ride duration, and wait times, among other relevant indicators.
 
-Suppose a quant at a hedge fund is using the NIFTY 50 stock datasets to build a predictive model for algorithmic trading. The model employs a time-series analysis approach based on historical price trends, trading volumes, and other relevant stock market indicators.
+However, one significant challenge with this approach arises due to the dynamic and unpredictable nature of the urban transportation environment. Unforeseen events like sudden changes in weather conditions, major city events, traffic disruptions, and changes in local regulations can all significantly impact ride demand and availability.
 
-However, in March 2020, the global stock market saw unprecedented volatility due to the outbreak of the COVID-19 pandemic. In real-world situations like these, relying solely on past stock market data for modeling can lead to significant forecasting errors. This is because the historical data in the dataset does not account for unforeseen external shocks like pandemics, geopolitical events, or abrupt regulatory changes.
+![image](https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/d7eb4dd5-5130-44bc-bba1-0aa456100c6b)
 
-<img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_NIFTY-50-Stock-Market-Data/assets/121205860/bfa8eaec-3fad-47d4-8c34-1d66ab50996e">
+Using the Uber datasets as an example, user behavior and ride demand patterns can differ significantly based on the aforementioned factors. A prediction algorithm that relies heavily on historical data might generate inaccurate forecasts, leading to inefficient resource allocation, suboptimal service levels, and potential revenue loss.
 
+Another complication could arise when these datasets are used across different geographical locations. Uber operates in numerous countries, and the ride data is influenced by local context, such as traffic patterns, cultural practices, and regional regulations. If an analyst does not factor in these local variations while analyzing the datasets, it could lead to incorrect conclusions and decisions.
 
-In the context of the NIFTY 50 datasets, for example, the market behaviors during the pandemic period were quite different from historical trends. A trading algorithm relying heavily on past data might make flawed predictions and lead to substantial financial losses for the hedge fund.
-
-Another issue could arise for international investors who use these datasets. The NIFTY 50 data is denominated in Indian Rupees, so fluctuations in exchange rates between the Rupee and other currencies can affect investment returns. If the investor fails to factor in these currency risks while analyzing the datasets, it could lead to inaccurate assessments of potential profits or losses.
-
-These scenarios highlight the importance of supplementing historical data analysis with an understanding of current market conditions, world events, and other relevant factors to make informed and prudent investment decisions.
-
+These scenarios underline the importance of combining historical data analysis with a keen understanding of current local context, relevant events, and other crucial factors to make informed and prudent business decisions.
 
 ## 2. Objective:
+The datasets containing historical ride data from Uber are invaluable for a multitude of applications. They can be used by urban planners, transportation analysts, and economists for in-depth analysis of urban mobility patterns, demand forecasting, and traffic management.
 
-The datasets containing the price history and trading volumes of the fifty stocks in the NIFTY 50 index from the National Stock Exchange (NSE) India are of great value for a multitude of applications. They can be used by investors, analysts, and economists for financial analysis. This can range from performing time-series analysis to predict future prices, analyzing performance over time, assessing risk, and identifying investment opportunities. Additionally, it serves as an excellent resource for educational purposes, allowing students to understand stock market behavior, volatility, trends, and the impact of market events on prices.
+For Uber and other ride-hailing services, these datasets can serve to optimize service levels, pricing strategies, and resource allocation. By analyzing past ride data, the company can anticipate demand hotspots, identify peak service times, and uncover trends and patterns that can guide strategic and operational decisions.
 
-Furthermore, these datasets can be utilized for algorithmic trading, enabling high-frequency traders and algorithm developers to backtest trading strategies, build predictive models, and optimize algorithms. For researchers, the data aids in understanding the impact of economic events on the Indian stock market and how individual stocks correlate with the overall market.
+Furthermore, the datasets can be used for academic and educational purposes, allowing students and researchers to understand urban mobility patterns, study the impact of events on ride demand, and analyze the effects of ride-hailing services on urban transportation systems.
 
-Each stock dataset, split into .csv files, includes fields like date, open, high, low, close, and volume, whereas the metadata file provides information about the stock symbol, industry, listing date, and market cap. Despite its immense utility, the data should be used with an understanding of its limitations, such as it reflects historical market conditions, does not account for corporate actions, external events, exchange rate fluctuations, and regulatory changes, which might impact the stock prices significantly. Finally, it's crucial to use this dataset responsibly and ensure compliance with all applicable laws and regulations.
+Each Uber dataset, typically structured in .csv files, includes fields like ride timestamps, origin and destination coordinates, ride duration, and wait times. However, despite their immense utility, these datasets have certain limitations. They represent historical patterns, do not account for sudden external events or local context variations, and rely on the accuracy of the recorded data. It's essential to consider these limitations when using this data for predictive modeling or decision-making purposes.
 
+Lastly, it's crucial to use this dataset responsibly, maintaining user anonymity, ensuring data privacy, and complying with all applicable laws and regulations.
 ## 3. Technologies:
 
 The choosen technologies is variative and depends on the case and condition. There are some option for certain case and in this case, I am using this option since it's the easiest.
 
-- Dockerfile
-- Docker Compose
-- VM GCP
-- Airflow / Prefect
+- Jupyter notebook
+- Mage
+- Google VM Instances
 - GCS (Google Cloud Storage)
-- Bigquery
-- Spark
+- Google Bigquery
 - Google Data Studio
 
 ## 4. Data Architecture:
-<img width="515" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/dc9c90af-fa31-46a1-ad31-e14f8a688e1d">
-
-
+<img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/75b47d8f-2dea-4b43-89bf-c3b504181c2e">
 
 ## 5. Data Description:
 
-The data is the price history and trading volumes of the fifty stocks in the index NIFTY 50 from NSE (National Stock Exchange) India. All datasets are at a day-level with pricing and trading values split across .cvs files for each stock along with a metadata file with some macro-information about the stocks itself. The data spans from 1st January, 2000 to 30th April, 2021.
+The data include all track record of the Uber or NYC taxi data. It consists some columns which we will be generated to be some tables.
 
-These data was collected from kaggle : https://www.kaggle.com/datasets/rohanrao/nifty50-stock-market-data
+These data was collected from kaggle : https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
-## 6. Set Up the Environment
+## 6. Draw.io
 
-You gonna need some tools:
+1. Design the database by building main table (fact table) and branch table (dimension table)
+2. Fact table consist the numeric data and the dimension table consist the context of that numeric data.
+3. Put the id (Primary key and foreign key.
 
-1. Google Cloud Platform
-2. Terraform
+## 7. Jupyter Notebook
 
+![image](https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/ad17d8d4-0ad7-4ebe-8f12-6606b826bd25)
+
+1. To access the jupyter notebook can use the VM instances (which be provided in GCP) or just use your initial OS.
+2. Create the github repo and run 'git clone' in new directory.
+3. Import the necessary package
+4. Download the data from the website using ( !wget <link address> )
+5. Create the table by duplicate the column from the initial big table
+6. Generate the id (Primary key of the table) by using the index (It will generate the number from 1)
+
+
+   
 ### 6.1 Google Cloud Platform:
 
 <img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/5424e67f-d94a-45fa-8ab9-ac706aeddfad">
