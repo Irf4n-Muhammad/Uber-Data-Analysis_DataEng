@@ -74,17 +74,21 @@ These data was collected from kaggle : https://www.nyc.gov/site/tlc/about/tlc-tr
 9. Lastly, merge all the table and arrange the sequence of the table column.
 
    
-### 6.1 Google Cloud Platform:
+## 8. Mage:
 
-<img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/5424e67f-d94a-45fa-8ab9-ac706aeddfad">
+![image](https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/34f73eaf-6bf1-4b6d-9409-0a435138996d)
 
-In this chapter, we will set up several things you need to set up your firest google cloud platform accout before ready to be used
 
-1. Create the new project (you can use the old project, if you think it's fine)
-2. Set the VM Instances
-3. Set the service account and assign the right roles on it
-4. Create the new bucket
-5. Create the new dataset (optional, due to you can make it along the process)
+In this project, we will use mage which is the modern data pipeline platform. We can do many things here such as load, transform, and export.
+
+1. So the firstly, we need to open our Virtual Machine (In this case, I am using google cloud VM Instances)
+2. Run the requirement environment
+3. Initialize the mage tool by using the command in mage website
+4. Start the project by typing ( mage start <name-of-project> )
+5. Now, in your google account, please set the permission to allow the 6789 port which we gonna use for our localhost (Set in the firewall section in GCP)
+6. Also, copy your external IP address of your VM instances and add the port ( <externalIPAddress>.6789 )
+7. Then, your mage webpage will be opened
+
 
 ### 6.2 Terraform:
 
