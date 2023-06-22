@@ -1,4 +1,4 @@
-# Data-Engineering-Project_Uber-Data-Analysis
+# Data-Engineering-Project_NYC_Taxi-Data-Analysis
 
 ## 1. Description of the Problem:
 
