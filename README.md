@@ -1,8 +1,5 @@
 # Data-Engineering-Project / Uber Data Analysis
 
-# (STILL IN PROGRESS, WILL BE UPDATED SOON)
-
-
 ## 1. Description of the Problem:
 In the arena of urban transportation planning and ride-hailing services, data analysts frequently utilize historical ride data to develop predictive models. These models are used to forecast future demand, optimize route planning, and inform strategic business decisions.
 
@@ -93,7 +90,7 @@ In this project, we will use mage which is the modern data pipeline platform. We
 
 ## Google Bigquery:
 
-![image](https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/9ac37ead-7a01-4829-b7e1-96bc6f90d817)
+<img src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/9ac37ead-7a01-4829-b7e1-96bc6f90d817" width="600" height="400">
 
 Bigquery platform can be accessed in GCP. Since in the previous step, the load step has created the table in bigquery, so we can directly write the SQL comman to create one table that will be used for data visualization. This table will consist all the information from the entire table but referring to that table (we use join command to connect all of them)
 
@@ -108,20 +105,12 @@ It's pretty simple, you can connect your bigquery with google data studio and us
 
 These are my dashboard:
 
-<img width="725" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_NIFTY-50-Stock-Market-Data/assets/121205860/9f39fa24-adfc-43e8-9c3c-2bda5d5d8006">
-<img width="720" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_NIFTY-50-Stock-Market-Data/assets/121205860/15c07694-dfa6-497d-b841-104f7ac13a28">
+<img width="722" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/5909905f-6c24-4bf7-b1b5-e4b23cc22696">
+
 
 
 From this two data visualization, we could get many information:
-1. The most expensive stocks since 2000 - 2021
-2. The progress of stock indicator in every year
-3. The industrial category that going up and down in different era
-4. Analyze why certain stock was booming and others was not
-5. Find the pattern of similar situation that can use to predict the future stocks
-6. etc
-
-
-
-## Reference Link:
-
-https://w0.peakpx.com/wallpaper/252/11/HD-wallpaper-stock-market-perfect-line-chart-representation-chart-pattern-thumbnail.jpg
+1. Number of services usage in certain location
+2. The amount of that services in certain interval time
+3. The most frequent used services in total
+4. etc
