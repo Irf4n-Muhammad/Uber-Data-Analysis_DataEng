@@ -1,5 +1,17 @@
 # Data-Engineering-Project / Uber Data Analysis
 
+## List of Contents:
+1. [Description of the Problem](#1-description-of-the-problem)
+2. [Objective](#2-objective)
+3. [Technologies](#3-technologies)
+4. [Data Architecture](#4-data-architecture)
+5. [Data Description](#5-data-description)  
+6. [Draw.io](#6-drawio)  
+7. [Jupyter Notebook](#7-jupyter-notebook)
+8. [Mage](#8-mage)
+9. [Google Bigquery](#9-google-bigquery)
+10. [Google Data Studio](#10-google-data-studio)
+    
 ## 1. Description of the Problem:
 In the arena of urban transportation planning and ride-hailing services, data analysts frequently utilize historical ride data to develop predictive models. These models are used to forecast future demand, optimize route planning, and inform strategic business decisions.
 
@@ -88,7 +100,7 @@ In this project, we will use mage which is the modern data pipeline platform. We
 8. Then, we gonna create the data pipeline for three steps (extract, load, transformation)
 
 
-## Google Bigquery:
+## 9. Google Bigquery:
 
 <img src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/9ac37ead-7a01-4829-b7e1-96bc6f90d817" width="600" height="400">
 
@@ -97,7 +109,7 @@ Bigquery platform can be accessed in GCP. Since in the previous step, the load s
 1. Join the fact tables with the dimension tables
 2. Select all the columns and merge to become one table
 
-## 7. Google Data Studio:
+## 10. Google Data Studio:
 
 <img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/5e3bd7a1-eee6-43a8-8912-985be393722e">
 
@@ -106,8 +118,6 @@ It's pretty simple, you can connect your bigquery with google data studio and us
 These are my dashboard:
 
 <img width="722" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/5909905f-6c24-4bf7-b1b5-e4b23cc22696">
-
-
 
 From this two data visualization, we could get many information:
 1. Number of services usage in certain location
