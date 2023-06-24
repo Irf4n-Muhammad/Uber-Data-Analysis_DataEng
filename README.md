@@ -59,8 +59,6 @@ These data was collected from kaggle : https://www.nyc.gov/site/tlc/about/tlc-tr
 
 ## 6. Draw.io
 
-![image](https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/c8f876ea-4e45-45e1-9b1b-68cb902375dc)
-
 1. Design the database by building main table (fact table) and branch table (dimension table)
 2. Fact table consist the numeric data and the dimension table consist the context of that numeric data.
 3. Put the id (Primary key and foreign key).
@@ -69,8 +67,6 @@ These data was collected from kaggle : https://www.nyc.gov/site/tlc/about/tlc-tr
 
 
 ## 7. Jupyter Notebook
-
-![image](https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/ad17d8d4-0ad7-4ebe-8f12-6606b826bd25)
 
 1. To access the jupyter notebook can use the VM instances (which be provided in GCP) or just use your initial OS.
 2. Create the github repo and run 'git clone' in new directory.
@@ -84,9 +80,6 @@ These data was collected from kaggle : https://www.nyc.gov/site/tlc/about/tlc-tr
 
    
 ## 8. Mage:
-
-![image](https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/34f73eaf-6bf1-4b6d-9409-0a435138996d)
-
 
 In this project, we will use mage which is the modern data pipeline platform. We can do many things here such as load, transform, and export.
 
@@ -102,16 +95,12 @@ In this project, we will use mage which is the modern data pipeline platform. We
 
 ## 9. Google Bigquery:
 
-<img src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_Uber-Data-Analysis/assets/121205860/9ac37ead-7a01-4829-b7e1-96bc6f90d817" width="600" height="400">
-
 Bigquery platform can be accessed in GCP. Since in the previous step, the load step has created the table in bigquery, so we can directly write the SQL comman to create one table that will be used for data visualization. This table will consist all the information from the entire table but referring to that table (we use join command to connect all of them)
 
 1. Join the fact tables with the dimension tables
 2. Select all the columns and merge to become one table
 
 ## 10. Google Data Studio:
-
-<img width="700" alt="image" src="https://github.com/Irf4n-Muhammad/Data-Engineering-Project_COVID19-Dataset/assets/121205860/5e3bd7a1-eee6-43a8-8912-985be393722e">
 
 It's pretty simple, you can connect your bigquery with google data studio and use the created table to be visualized. Build your dasboard which with the hope, it can answer all the problem solving question clearly.
 
